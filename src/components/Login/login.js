@@ -1,5 +1,5 @@
 import React from 'react';
-import loginImage from '../../Images/login.png';
+import loginImage from '../../Images/Mobile login-bro.svg';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -43,10 +43,7 @@ const Login = () => {
                     placeholder="Password"
                   />
                   <span className="absolute inset-y-0 right-0 flex items-center pr-3">
-                    <svg className="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" />
-                        <path d="M10 12a4 4 0 100-8 4 4 0 000 8zm0 2a6 6 0 110-12 6 6 0 010 12zm2-8h-4v4h4V6z" />
-                      </svg>                                       
+                                                          
                   </span>
                 </div>
               </div>

@@ -2,12 +2,22 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from './smallcomponents/Sidebar';
 import TopNavigation from './smallcomponents/TopNavigation';
 import AdminCard from './smallcomponents/AdminCard';
+import ProfileModal from './smallcomponents/ProfileModal'; // Import ProfileModal
 
 const ManageAdmin = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false); // State for profile modal
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const openProfile = () => {
+    setIsProfileOpen(true);
+  };
+
+  const closeProfile = () => {
+    setIsProfileOpen(false);
   };
 
   useEffect(() => {
@@ -31,7 +41,7 @@ const ManageAdmin = () => {
       {/* Main content area */}
       <div className={`flex-1 flex flex-col transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-0'}`}>
         {/* Top Navigation */}
-        <TopNavigation toggleSidebar={toggleSidebar} />
+        <TopNavigation toggleSidebar={toggleSidebar} openProfile={openProfile} />
 
         {/* Main content */}
         <div className="p-6 flex-1 overflow-y-auto">
@@ -40,6 +50,8 @@ const ManageAdmin = () => {
           <AdminCard />
         </div>
       </div>
+      {/* Profile Modal */}
+      <ProfileModal isOpen={isProfileOpen} onClose={closeProfile} />
     </div>
   );
 };

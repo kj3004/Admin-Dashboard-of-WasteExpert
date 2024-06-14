@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './smallcomponents/Sidebar';
 import TopNavigation from './smallcomponents/TopNavigation';
-import CollectorCard from './smallcomponents/CollectorCard';
-import ProfileModal from './smallcomponents/ProfileModal';
+import Map from './smallcomponents/Map';
+import ProfileModal from './smallcomponents/ProfileModal'; // Import ProfileModal
 
-const ManageCollector = () => {
+const ViewMap = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false); // State for profile modal
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -45,9 +45,10 @@ const ManageCollector = () => {
 
         {/* Main content */}
         <div className="p-6 flex-1 overflow-y-auto">
-          {/* Collector cards section */}
-          <h2 className="text-2xl font-semibold mb-4">Manage Collector</h2>
-          <CollectorCard />
+          {/* Map component */}
+          <div className="w-full h-full"> {/* Adjust height as needed */}
+            <Map />
+          </div>
         </div>
       </div>
       {/* Profile Modal */}
@@ -56,4 +57,4 @@ const ManageCollector = () => {
   );
 };
 
-export default ManageCollector;
+export default ViewMap;

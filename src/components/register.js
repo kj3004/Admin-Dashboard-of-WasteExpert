@@ -1,7 +1,7 @@
 // Register.js
 
 import React from 'react';
-import registerImage from '../Images/Admin-Profile-PNG-Clipart.png';
+import registerImage from '../Images/Mobile login-amico.svg';
 import { Link } from 'react-router-dom';
 
 const Register = () => {

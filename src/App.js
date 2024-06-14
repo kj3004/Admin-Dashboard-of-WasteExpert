@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard';
 import ManageAdmins from './components/mangeadmin';
 import ManageCollector from './components/managecollector';
 import ManageDispatcher from './components/managedispatcher';
+import ViewMap from './components/viewmap';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/mangeadmin" component={ManageAdmins} />
         <Route path="/managecollector" component={ManageCollector} />
         <Route path="/managedispatcher" component={ManageDispatcher} />
+        <Route path="/viewmap" component={ViewMap} />
       </Switch>
     </Router>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../Images/Drivers.jpeg'; // Adjust the path according to your project structure
+import logo from '../../Images/Logo.png'; // Adjust the path according to your project structure
 
 
 const Sidebar = ({ isOpen }) => {
@@ -43,38 +43,39 @@ const Sidebar = ({ isOpen }) => {
       <aside
         id="nav-menu-1"
         aria-label="Side navigation"
-        className={`fixed top-0 bottom-0 left-0 z-40 flex w-64 flex-col bg-blue-900 text-white py-8 px-6 transition-transform lg:translate-x-0 ${
+        className={`fixed top-0 bottom-0 left-0 z-40 flex w-64 flex-col bg-teal-600 text-white py-8 px-6 transition-transform lg:translate-x-0 ${
           isSideNavOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="text-3xl font-bold mb-8 flex items-center">
-          <img src={logo} alt="Logo" className="h-10 mr-2" />
-          WasteExpert
+            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <img src={logo} alt="Logo" className="h-10 mr-2" />  
+          </a>        
         </div>
         <nav className="mb-auto">
           <ul className="space-y-4">
             <li>
-              <Link to="#" className="block py-2 px-4 hover:bg-blue-800">
+              <Link to="/viewmap" className="block py-2 px-4 text-slate-900 transition-colors hover:text-emerald-200 focus:bg-teal-500 aria-[current=page]:bg-emerald-500 aria-[current=page]:text-emerald-500">
                 View Map
               </Link>
             </li>
             <li>
-              <Link to="/mangeadmin" className="block py-2 px-4 hover:bg-blue-800">
+              <Link to="/mangeadmin" className="block py-2 px-4 text-slate-900 transition-colors hover:text-emerald-200 focus:bg-teal-500 aria-[current=page]:bg-emerald-500 aria-[current=page]:text-emerald-500">
                 Manage Admin
               </Link>
             </li>
             <li>
-              <Link to="/managedispatcher" className="block py-2 px-4 hover:bg-blue-800">
+              <Link to="/managedispatcher" className="block py-2 px-4 text-slate-900 transition-colors hover:text-emerald-200 focus:bg-teal-500 aria-[current=page]:bg-emerald-500 aria-[current=page]:text-emerald-500">
                 Manage Dispatcher
               </Link>
             </li>
             <li>
-              <Link to="/managecollector" className="block py-2 px-4 hover:bg-blue-800">
+              <Link to="/managecollector" className="block py-2 px-4 text-slate-900 transition-colors hover:text-emerald-200 focus:bg-teal-500 aria-[current=page]:bg-emerald-500 aria-[current=page]:text-emerald-500">
                 Manage Collector
               </Link>
             </li>
             <li>
-              <Link to="#" className="block py-2 px-4 hover:bg-blue-800">
+              <Link to="#" className="block py-2 px-4 text-slate-900 transition-colors hover:text-emerald-200 focus:bg-teal-500 aria-[current=page]:bg-emerald-500 aria-[current=page]:text-emerald-500">
                 Manage Schedule
               </Link>
             </li>
