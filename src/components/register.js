@@ -1,20 +1,23 @@
-// Register.js
-
 import React from 'react';
 import registerImage from '../Images/Mobile login-amico.svg';
 import { Link } from 'react-router-dom';
+import logo from '../Images/Logo.png';
 
 const Register = () => {
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      <div className="flex flex-1 items-center justify-center">
-        <img src={registerImage} alt="Illustration" className="hidden md:block max-w-xs lg:max-w-md" />
+    <div className="flex flex-col min-h-screen md:flex-row bg-gray-100">
+      <div className="flex flex-1 items-center justify-center p-4 md:p-6">
+        <img src={registerImage} alt="Illustration" className="max-w-xs lg:max-w-md md:mr-8" />
       </div>
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex flex-1 items-center justify-center p-4 md:p-6">
         <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-md shadow-md">
           <div>
             <h2 className="text-center text-3xl font-bold text-gray-900">Create an Account</h2>
-            <h2 className="text-center text-3xl font-bold text-teal-600">WasteExpert</h2>
+            <div className="flex justify-center mb-8">
+            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+              <img src={logo} alt="Logo" className="h-10" />
+            </a>
+          </div>
           </div>
           <form className="mt-8 space-y-6">
             <div className="space-y-4">
